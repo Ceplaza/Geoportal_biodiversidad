@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geoportal UCuenca</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="sidebar">
+  <div class="sidebar-header">
+    <h1>Geoportal</h1>
+    <span class="badge">UCuenca</span>
+  </div>
+  <p class="sidebar-sub">Capas geográficas · Supabase</p>
+
+  <div id="estado" class="estado-bar">
+    <span class="spinner"></span> Inicializando...
+  </div>
+
+  <div class="btn-group">
+    <button class="btn btn-primary" id="btnRecargar">Recargar todo</button>
+    <button class="btn btn-secondary" id="btnZoom">Zoom total</button>
+  </div>
+
+  <div class="basemap-section">
+    <label class="basemap-label">Base map</label>
+    <div class="basemap-options">
+      <button class="basemap-btn active" data-base="osm">
+        <span class="bm-icon">🗺️</span> Calle
+      </button>
+      <button class="basemap-btn" data-base="sat">
+        <span class="bm-icon">🛰️</span> Satélite
+      </button>
+    </div>
+  </div>
+
+  <div id="listaCapas" class="layer-list"></div>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
